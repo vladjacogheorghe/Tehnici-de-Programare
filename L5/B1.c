@@ -1,3 +1,8 @@
+//1. Sa se scrie un program care citeste de la tastura "N";
+//numere naturale. Pentru fiecare numar se va determina forma
+//lui binara, se va calcula inversul binar, iar mai apoi se
+//introduce intr - o stiva forma binara inversata.
+
 #define _CRT_SECURE_NO_WARNINGS
 #define MAX_SIZE 100
 #include <stdio.h>
