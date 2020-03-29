@@ -2,37 +2,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void VerificareCuSau(int v[], int n)
-{
-	int i, s = 0;
-
-	for (i = 0; i < n; i++)
-	{
-		s = (s | v[i]);
-		//printf("%d\n", s);
-	}
-	if ((s&(1 << 0)) == 0)
-		//aici se imparte pentru a afla ultimul bit si a arata daca e par sau impar ;)
-	{
-		printf("Numarul este Par\n");
-	}
-	else
-	{
-		printf("Numarul este Impar\n");
-	}
-}
-
 int main()
 {
-	int v[100], n, i;
-	printf("n="); scanf("%d", &n);
+    int n,v[100],i,s=0;
+    printf("n=");
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        printf("v[%d]=",i);
+        scanf("%d",&v[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        s=(s|v[i]);
 
-	for (i = 0; i < n; i++)
-	{
-		printf("v[%d]=", i);	scanf("%d", &v[i]);
-	}
-
-	VerificareCuSau(v, n);
-	system("pause");
-	return 0;
+    }
+    if((s&(1<<0))==0)
+    {
+        printf("Numarul este par\n");
+    }
+    else
+    {
+        printf("Numarul este impar\n");
+    }
+    system("pause");
+    return 0;
 }
+
+
